@@ -1,0 +1,59 @@
+# -------------------------------------------------------
+# MCP Server
+# -------------------------------------------------------
+spring:
+  # Load BITBUCKET_URL / BITBUCKET_TOKEN from a local .env file (parsed as a
+  # properties file). Optional, so the app still starts when those values come
+  # from the real environment. Spring Boot does not read .env files by default.
+  config:
+    import: optional:file:.env[.properties]
+  ai:
+    mcp:
+      server:
+        name: bitbucket-mcp
+        version: 1.0.0
+        description: Bitbucket MCP Server - browse projects, repos, branches, PRs, commits and files
+        # Default transport is SSE/HTTP (served at /sse on the port below).
+        # Activate the "stdio" profile (see bottom of this file) for STDIO mode.
+
+server:
+  port: 8080
+
+# -------------------------------------------------------
+# Bitbucket connection - set via environment variables:
+#   BITBUCKET_URL   = https://bitbucket.example.com
+#   BITBUCKET_TOKEN = your-personal-access-token
+# -------------------------------------------------------
+bitbucket:
+  url: ${BITBUCKET_URL}
+  token: ${BITBUCKET_TOKEN}
+
+# -------------------------------------------------------
+# Logging
+# -------------------------------------------------------
+logging:
+  level:
+    io.ivanandreev.ai: INFO
+    org.springframework.ai.mcp: INFO
+
+# -------------------------------------------------------
+# STDIO transport profile (activate with SPRING_PROFILES_ACTIVE=stdio).
+# Claude spawns the jar and talks JSON-RPC over stdin/stdout, so the web
+# server is disabled and nothing else is allowed to write to stdout
+# (banner off, console logging silenced) or it would corrupt the protocol.
+# -------------------------------------------------------
+---
+spring:
+  config:
+    activate:
+      on-profile: stdio
+  main:
+    web-application-type: none
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        stdio: true
+logging:
+  pattern:
+    console: ""
