@@ -33,8 +33,8 @@ bitbucket:
 # -------------------------------------------------------
 logging:
   level:
-    com.example.bitbucketmcp: TRACE
-    org.springframework.ai.mcp: TRACE
+    io.ivanandreev.ai: INFO
+    org.springframework.ai.mcp: INFO
 
 # -------------------------------------------------------
 # STDIO transport profile (activate with SPRING_PROFILES_ACTIVE=stdio).
