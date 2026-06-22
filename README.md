@@ -83,8 +83,9 @@ Start the server in SSE mode (above), then point the client at its `/sse` URL:
 ```json
 {
   "mcpServers": {
-    "bitbucket": {
-      "url": "http://localhost:8080/sse"
+    "bitbucket-mcp": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "http://localhost:8080/sse"]
     }
   }
 }
@@ -98,7 +99,7 @@ credentials passed in `env`:
 ```json
 {
   "mcpServers": {
-    "bitbucket": {
+    "bitbucket-mcp": {
       "command": "java",
       "args": [
         "-jar",
@@ -141,4 +142,4 @@ src/main/java/com/example/bitbucketmcp/
 ```
 
 > POJOs and API services are generated from `src/main/resources/bitbucket-openapi.yaml`
-> at build time (openapi-generator) into `com.example.bitbucketmcp.gen.*`.
+> at build time (openapi-generator) into `io.ivanandreev.ai.bitbucketmcp.gen.*`.

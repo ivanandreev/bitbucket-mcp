@@ -1,15 +1,15 @@
 package io.ivanandreev.ai.client;
 
+import io.ivanandreev.ai.bitbucketmcp.gen.api.ProjectApi;
+import io.ivanandreev.ai.bitbucketmcp.gen.api.PullRequestsApi;
+import io.ivanandreev.ai.bitbucketmcp.gen.api.RepositoryApi;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestBranch;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestCommit;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestProject;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestPullRequest;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestRepository;
 import io.ivanandreev.ai.dto.BitbucketPage;
 import io.ivanandreev.ai.dto.BrowseDto;
-import com.example.bitbucketmcp.gen.api.ProjectApi;
-import com.example.bitbucketmcp.gen.api.PullRequestsApi;
-import com.example.bitbucketmcp.gen.api.RepositoryApi;
-import com.example.bitbucketmcp.gen.model.RestBranch;
-import com.example.bitbucketmcp.gen.model.RestCommit;
-import com.example.bitbucketmcp.gen.model.RestProject;
-import com.example.bitbucketmcp.gen.model.RestPullRequest;
-import com.example.bitbucketmcp.gen.model.RestRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

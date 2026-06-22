@@ -33,7 +33,7 @@ bitbucket:
 # -------------------------------------------------------
 logging:
   level:
-    io.ivanandreev.ai: INFO
+    io.ivanandreev: INFO
     org.springframework.ai.mcp: INFO
 
 # -------------------------------------------------------

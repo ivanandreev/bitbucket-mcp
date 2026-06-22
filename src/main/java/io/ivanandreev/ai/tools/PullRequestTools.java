@@ -57,8 +57,7 @@ public class PullRequestTools {
             @ToolParam(description = "Repository slug") String repoSlug,
             @ToolParam(description = "Pull request ID") long pullRequestId
     ) {
-        PullRequestDetail pr = mapper.toPullRequestDetail(
-                client.getPullRequest(projectKey, repoSlug, pullRequestId));
+        PullRequestDetail pr = mapper.toPullRequestDetail(client.getPullRequest(projectKey, repoSlug, pullRequestId));
 
         return """
                 PR #%d [%s]: %s

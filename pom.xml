@@ -117,9 +117,9 @@
 
                             <output>${project.build.directory}/generated-sources/bitbucket</output>
 
-                            <invokerPackage>com.example.bitbucketmcp.gen</invokerPackage>
-                            <apiPackage>com.example.bitbucketmcp.gen.api</apiPackage>
-                            <modelPackage>com.example.bitbucketmcp.gen.model</modelPackage>
+                            <invokerPackage>io.ivanandreev.ai.bitbucketmcp.gen</invokerPackage>
+                            <apiPackage>io.ivanandreev.ai.bitbucketmcp.gen.api</apiPackage>
+                            <modelPackage>io.ivanandreev.ai.bitbucketmcp.gen.model</modelPackage>
 
                             <configOptions>
                                 <library>restclient</library>

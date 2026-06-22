@@ -1,15 +1,15 @@
 package io.ivanandreev.ai.mapper;
 
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestBranch;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestChangesetToCommitAuthor;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestCommentAnchorPullRequestAuthor;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestCommentAnchorPullRequestAuthorUser;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestCommit;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestProject;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestPullRequest;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestPullRequestParticipant;
+import io.ivanandreev.ai.bitbucketmcp.gen.model.RestRepository;
 import io.ivanandreev.ai.dto.FileDto;
-import com.example.bitbucketmcp.gen.model.RestBranch;
-import com.example.bitbucketmcp.gen.model.RestChangesetToCommitAuthor;
-import com.example.bitbucketmcp.gen.model.RestCommentAnchorPullRequestAuthor;
-import com.example.bitbucketmcp.gen.model.RestCommentAnchorPullRequestAuthorUser;
-import com.example.bitbucketmcp.gen.model.RestCommit;
-import com.example.bitbucketmcp.gen.model.RestProject;
-import com.example.bitbucketmcp.gen.model.RestPullRequest;
-import com.example.bitbucketmcp.gen.model.RestPullRequestParticipant;
-import com.example.bitbucketmcp.gen.model.RestRepository;
 import io.ivanandreev.ai.model.BranchInfo;
 import io.ivanandreev.ai.model.CommitInfo;
 import io.ivanandreev.ai.model.FileEntry;

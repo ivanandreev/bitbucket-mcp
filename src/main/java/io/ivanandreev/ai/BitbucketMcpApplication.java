@@ -1,4 +1,4 @@
-package io.ivanandreev.ai;
+package io.ivanandreev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
